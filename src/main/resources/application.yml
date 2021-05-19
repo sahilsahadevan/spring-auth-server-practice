@@ -1,0 +1,20 @@
+server:
+  port: 8081
+  context.path: /auth
+
+security.basic.enable: false
+
+user:
+  oauth:
+    user:
+      username: user
+      password: pass
+    clientId: client1
+    clientSecret: 1234$#@!
+    redirectUris: http://localhost:8081/login
+    accessTokenValidity: 300
+    refreshTokenValidity: 240000
+
+logging:
+  level:
+    root: DEBUG
